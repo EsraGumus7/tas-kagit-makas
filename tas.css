@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #e067b2;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  
+  }
+  
+  #score-board {
+    margin: 20px;
+    padding: 10px;
+  }
+  
+  #hands {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+  
+  #hands img {
+    width: 150px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #computer-hand {
+    transform: rotate(180deg); /* Bilgisayarın elini 180 derece döndür */
+    transition: transform 0.3s ease-in-out; /* Animasyon dışında dönüşüm sabit kalsın */
+  }
+  #player-hand {
+    transform: rotate(270deg); /* Bilgisayarın elini 180 derece döndür */
+    transition: transform 0.3s ease-in-out; /* Animasyon dışında dönüşüm sabit kalsın */
+    
+  }
+  
+  /* Sallama animasyonu */
+  @keyframes shake {
+    0%, 100% {
+      transform: rotate(0deg); /* Sallama yok */
+    }
+    25% {
+      transform: rotate(-15deg); /* Sallama hareketi */
+    }
+    50% {
+      transform: rotate(15deg); /* Sallama hareketi */
+    }
+    75% {
+      transform: rotate(-15deg); /* Sallama hareketi */
+    }
+  }
+  
+  .shake {
+    animation: shake 0.5s ease-in-out; /* Sallama animasyonunu uygula */
+  }
+  
+
+  
+  #buttons button {
+    background-color: #f4f4f4;
+    color: #333;
+    border: 2px solid #4b0082;
+    border-radius: 15px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  #buttons button:hover {
+    background-color: #4b0082;
+    color: white;
+  }
+  .container{
+    border: 2px solid rgb(154, 35, 73);
+    width: 800px;
+    height: 500px;
+}
+    
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Hem dikey hem yatayda ortalama */
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    display: none;  /* Başlangıçta gizli */
+    flex-direction: column;  /* Yatay ve dikeyde içeriği hizalar */
+    justify-content: center; /* Dikeyde ortalar */
+    align-items: center; /* Yatayda ortalar */
+    width: 300px;
+    height: 150px;
+    text-align: center;
+}
+
+
+#restart-btn {
+    background-color: #4b0082;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.popup h1, .popup p, #restart-btn {
+    margin: 10px 0; /* İçerik arasına boşluk ekler */
+}
+#restart-btn{
+    border-radius: 15px;
+}
+
+#restart-btn:hover {
+    background-color: #333;
+    border-radius: 15px;
+}
