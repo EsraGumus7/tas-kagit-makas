@@ -1,0 +1,115 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #e067b2;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  border: 2px solid rgb(154, 35, 73);
+  width: 800px;
+  height: 500px;
+  background-color: #e067b2;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+
+#score-board {
+  margin-bottom: 10px;
+}
+
+#hands {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
+  gap: 150px;
+}
+
+#hands img {
+  width: 150px;
+  transition: transform 0.3s ease-in-out;
+}
+
+#player-hand {
+  transform: scaleX(-1); /* Bilgisayar elini simetrik yap */
+  margin-left: 175px;
+}
+#computer-hand {
+  margin-right: 175px;
+}
+
+/* Sallama animasyonu */
+@keyframes shake {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  50% {
+    transform: rotate(15deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+}
+
+.shake {
+  animation: shake 0.5s ease-in-out;
+}
+
+#buttons button {
+  background-color: #f4f4f4;
+  color: #333;
+  border: 2px solid #4b0082;
+  border-radius: 15px;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#buttons button:hover {
+  background-color: #4b0082;
+  color: white;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  display: none;
+  text-align: center;
+}
+
+#restart-btn {
+  background-color: #4b0082;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 15px;
+}
+
+#restart-btn:hover {
+  background-color: #333;
+}
